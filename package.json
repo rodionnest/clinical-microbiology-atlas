@@ -1,0 +1,8 @@
+{
+  "name": "clinical-microbiology-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node --test tests/atlas.test.js", "start": "python -m http.server 4173 --bind 127.0.0.1"},
+  "description": "Русскоязычный учебный атлас клинической микробиологии"
+}
