@@ -7,3 +7,27 @@
 @media print{.header-right,.filters,.view-switch,.table-toolbar,.workspace-nav,.hero-art,footer,.notice,.table-foot{display:none}.table-container{max-height:none;overflow:visible;border:0}main{padding:0}.hero{min-height:0;padding:15px 0}.hero h1{font-size:25px}.hero-description{display:none}.overview-table{min-width:0}button{color:inherit}th{position:static}.table-container table{font-size:9px}td{padding:8px}.bacterium-button img{width:30px;height:30px}.hero-stats{margin-top:10px}}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 th button{display:block;width:100%;min-height:24px}th[aria-sort="ascending"],th[aria-sort="descending"]{color:var(--teal);background:#e4eee1}.sort-arrow{display:inline-block;margin-left:3px;font-size:11px}.matrix th button{text-align:center}.matrix th:first-child button{text-align:left}
+
+/* Original microscopy images: preserve their entire frame and scale bars. */
+.bacterium-button img{width:56px;height:44px;object-fit:contain;border-radius:5px;background:#f0f1ec;border:1px solid #dfe5dc;flex-shrink:0}
+.matrix .bacterium-button img{width:44px;height:36px;object-fit:contain}
+.hero-art.microscopy-hero{margin:0;align-self:center;padding:12px;background:#f5f7f0;border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 40px #1b45310a;transform:rotate(1deg);max-width:430px;justify-self:end}
+.hero-art.microscopy-hero>img{display:block;width:100%;height:220px;object-fit:contain;background:#232a27;border-radius:8px}
+.microscopy-hero figcaption{padding:12px 5px 3px;display:grid;gap:5px;color:var(--muted)}
+.microscopy-hero figcaption strong{font-size:14px;font-style:italic;color:var(--ink);font-weight:550}
+.microscopy-hero figcaption span{font-size:10px}
+.microscopy-hero figcaption a,.microscopy-hero figcaption small{font-size:8px;line-height:1.5}
+.micrograph-figure{margin:0 0 16px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.micrograph-view{display:block;position:relative;background:#eff1ed;text-decoration:none;color:var(--ink)}
+.micrograph-view img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain}
+.micrograph-view>span{display:block;padding:9px 14px;text-align:right;font-size:10px;border-top:1px solid var(--line);background:#f7f9f4}
+.micrograph-view:hover>span{color:var(--teal);text-decoration:underline}
+.micrograph-figure figcaption{padding:16px 18px;font-size:11px;line-height:1.75}
+.micrograph-figure figcaption strong{font-weight:550;color:var(--ink)}
+.micrograph-figure figcaption p{margin:8px 0 0;color:var(--muted)}
+.micrograph-figure .photo-credit{font-size:10px}
+.image-context{font-size:10px;line-height:1.8;color:var(--muted);margin:0 0 20px;padding-left:12px;border-left:2px solid #d8e2d2}
+.diagram-figure>img{display:block;margin:20px auto;width:150px;height:150px}
+@media(min-width:1550px){.hero-art.microscopy-hero>img{height:245px}}
+@media(max-width:700px){.hero-art.microscopy-hero{display:none}.matrix .bacterium-button img{width:34px;height:30px}.micrograph-view img{max-height:300px}.micrograph-figure figcaption{padding:13px}.detail-head{margin-bottom:18px}}
+@media print{.hero-art.microscopy-hero{display:none}.bacterium-button img{width:38px;height:30px}}

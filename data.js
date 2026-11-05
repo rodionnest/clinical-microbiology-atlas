@@ -1,4 +1,5 @@
 // Curated teaching rules, not patient AST results. Every populated cell has a source.
+import {MICROGRAPHS} from './micrographs.js';
 export const REVIEW_DATE = '2026-11-05';
 export const SOURCES = {
   er: {title:'EUCAST · Expected Resistant Phenotypes',version:'v1.2 · январь 2023',url:'https://www.eucast.org/fileadmin/eucast/pdf/expert_rules/Expected_Resistant_Phenotypes_v1.2_20230113.pdf',scope:'Ожидаемые резистентные фенотипы; выбранные пары вида и препарата.'},
@@ -55,7 +56,7 @@ export const SPECIES = [
  ['listeria','Listeria monocytogenes','Листерия моноцитогенес','positive','rod','Грамположительные палочки','Короткие палочки'],
  ['bfrag','Bacteroides fragilis','Бактероидес фрагилис','negative','rod','Анаэробы','Палочки'],
  ['cdiff','Clostridioides difficile','Клостридиоидес диффициле','positive','spore','Анаэробы','Спорообразующие палочки']
-].map(([id,name,ru,gram,shape,group,morphology])=>({id,name,ru,gram,shape,group,morphology,image:`assets/${shape}-${gram}.svg`}));
+].map(([id,name,ru,gram,shape,group,morphology])=>({id,name,ru,gram,shape,group,morphology,micrograph:MICROGRAPHS[id]||null,image:MICROGRAPHS[id]?.src||`assets/${shape}-${gram}.svg`}));
 
 const base = {};
 function put(species,drugs,status,source,section,note='') {
